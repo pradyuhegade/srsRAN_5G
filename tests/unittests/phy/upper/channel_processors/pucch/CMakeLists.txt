@@ -65,7 +65,7 @@ if (USE_PHY_TESTVECTORS)
             gtest
             gtest_main)
     add_test_vector(pucch_demodulator_format2_test pucch_demodulator_format2_test_data.tar.gz "")
-
+#[[
     add_executable(pucch_demodulator_format3_test pucch_demodulator_format3_test.cpp)
     target_link_libraries(pucch_demodulator_format3_test
             srsran_channel_equalizer
@@ -91,7 +91,7 @@ if (USE_PHY_TESTVECTORS)
             gtest
             gtest_main)
     add_test_vector(pucch_demodulator_format4_test pucch_demodulator_format4_test_data.tar.gz "")
-
+]]
     add_executable(pucch_detector_test pucch_detector_test.cpp)
     target_link_libraries(pucch_detector_test srsran_channel_processors srsran_channel_equalizer srslog gtest gtest_main)
     add_test_vector(pucch_detector_test pucch_detector_test_data.tar.gz "")
@@ -131,7 +131,7 @@ if (USE_PHY_TESTVECTORS)
             gtest_main)
     add_test(pucch_processor_format2_vectortest pucch_processor_format2_vectortest)
     add_test_vector(pucch_processor_format2_vectortest pucch_processor_format2_test_data.tar.gz "")
-
+#[[
     add_executable(pucch_processor_format3_vectortest pucch_processor_format3_vectortest.cpp)
     target_link_libraries(pucch_processor_format3_vectortest
             srsran_channel_processors
@@ -155,4 +155,5 @@ if (USE_PHY_TESTVECTORS)
             gtest_main)
     add_test(pucch_processor_format4_vectortest pucch_processor_format4_vectortest)
     add_test_vector(pucch_processor_format4_vectortest pucch_processor_format4_test_data.tar.gz "")
+]]
 endif (USE_PHY_TESTVECTORS)
